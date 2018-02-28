@@ -67,7 +67,7 @@
 		if ($picture){
 			echo "<div class=\"griddy\"> <img class=\"gametile\" src=\"$picture\" alt=\"{$row['name']}\" title=\"{$row['name']}\"></img></div>";
 		}else{
-			 echo "<div class=\"griddy\"> <img class=\"gametile\" src=\"notavailable.jpg\" alt=\"{$row['name']}\" title=\"{$row['name']}\"></img></div>";
+			 echo "<div class=\"griddy\"> <img class=\"gametile\" src=\"notavailable.jpg\" alt=\"{$row['name']}\" title=\"{$row['name']}\" style=\"max-height: 99.999%;\"></img></div>";
 		}
         }
 	echo "</div>"; //container
