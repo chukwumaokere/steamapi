@@ -17,7 +17,8 @@
 #container {
 	/*margin: 0 auto;*/
 	display: grid;
-	grid: repeat(5, 250px) / auto-flow 400px;
+	/* grid: repeat(5, 250px) / auto-flow 400px; */
+	grid: repeat(5, auto) / auto-flow auto;
 }
 .gametile{
 	display: block;
@@ -36,4 +37,14 @@
 }
 #centerme{
 	/*idk*/
+	display: block;
+	margin: 5%;
+	margin-top: 2%;
+	
+}
+#centeragain{
+	display: block;
+	margin-top: 0%;
+	#margin: 2%;
+	padding: 3%; /*uhh?*/
 }
