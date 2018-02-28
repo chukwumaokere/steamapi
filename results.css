@@ -20,6 +20,7 @@
 	/* grid: repeat(5, 250px) / auto-flow 400px; */
 	grid: repeat(5, auto) / auto-flow auto;
 	grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+	grid-auto-flow: row;
 }
 .gametile{
 	display: block;
