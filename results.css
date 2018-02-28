@@ -35,11 +35,17 @@
 .griddy{
 	padding: 6%;
 }
+#contents{
+	margin: 5%;
+	margin-top: 0%;
+}
 #centerme{
 	/*idk*/
+	/*
 	display: block;
 	margin: 5%;
 	margin-top: 2%;
+	*/
 	
 }
 #centeragain{
