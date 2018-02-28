@@ -5,7 +5,8 @@
 </head>
 <body class="bg">
 <div id="contents">
-<div id="container">
+	<div id="centerme">
+	<div id="container">
 <?php
         $url = "http://store.steampowered.com/api/appdetails?appids=";
   //      echo "Now";
@@ -68,7 +69,8 @@
 			 echo "<div class=\"griddy\"> <img class=\"gametile\" src=\"notavailable.jpg\" alt=\"{$row['name']}\" title=\"{$row['name']}\"></img></div>";
 		}
         }
-	echo "</div>";
+	echo "</div>"; //centerme
+	echo "</div>"; //container
 	if ($totalItems > 20){
 		$nextpage = $pageno + 1;
 		$prevpage = $pageno - 1;
