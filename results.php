@@ -122,6 +122,10 @@
 	}
 	echo "<div class=\"footer\">";
         echo $pagination;
+	echo "<br>";
+	echo "<div class=\"jumper\">";
+	echo "Jump to page: <input  style=\"color:black;text-align:center;\"type=\"text\" size=1> &nbsp; <button type=\"button\" class=\"btn btn-info go\">Go</button>";
+	echo "</div>"; //jumper
 	echo "</div>";
 
 ?>

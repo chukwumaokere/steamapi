@@ -34,6 +34,14 @@
 img.gametile:hover{
 	border-radius: 13px;
 	box-shadow: 0 0 20px 13px #808080;
+	transform: scale(1.2);
+	transition: transform .2s;
+}
+.go {
+	padding: 3px 8px !important;
+}
+.jumper{
+	margin-top : 1%;
 }
 .footer{
 	color: white;
