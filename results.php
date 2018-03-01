@@ -50,7 +50,7 @@
                         $q = '';
                         echo "Please Specify a game name or app id from Steam";
                 }
-                if ($gamename == 'List All Games'){
+                if ($gamename == 'List All Games' || $gamename == '*'){
 //                        $q = "SELECT * FROM apps";
 			$qcount = "SELECT count(*) FROM apps";
 				$resCount = $db->query($qcount);

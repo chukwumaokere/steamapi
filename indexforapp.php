@@ -25,7 +25,7 @@
 		<input name="gamename" class="has-border has-padding full-width shadow" placeholder="Steam App ID or game name"></input>
 		<input class="half-width btn-shadow" type="submit" name="submit" value="Search" style="width:115px">
 	</form>
-	<p class="bottom-text" style="color: white">Type "List All Games" (case-sensitive) in search box for a full list of games </p>
+	<p class="bottom-text" style="color: white">Type "List All Games" (case-sensitive) or "*" in search box for a full list of games </p>
 	</div>
 	
 </div>

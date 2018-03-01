@@ -20,12 +20,12 @@
 
 </div>
 	<div class="content">
-	<form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST" name="search">
+	<form action="results.php" method="POST" name="search">
 		<h1>Search for Steam Games</h1>
 		<input name="gamename" class="has-border has-padding full-width shadow" placeholder="Steam App ID or game name"></input>
 		<input class="half-width btn-shadow" type="submit" name="submit" value="Search" style="width:115px">
 	</form>
-	<p class="bottom-text" style="color: white">Type "List All Games" (case-sensitive) in search box for a full list of games </p>
+	<p class="bottom-text" style="color: white">Type "List All Games" (case-sensitive) or "*" in search box for a full list of games </p>
 	</div>
 	
 </div>
@@ -33,6 +33,7 @@
 </div>
 
 <?php
+/*
 if(isset($_POST['submit'])){
 	$url = "http://store.steampowered.com/api/appdetails?appids=";
   //      echo "Now";
@@ -78,6 +79,7 @@ if(isset($_POST['submit'])){
 	//nothing was set.
 	die();
 }
+*/
 ?>
 
 
