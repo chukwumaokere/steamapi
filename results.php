@@ -2,6 +2,9 @@
 <title>Pinots Steam API v1.0.0</title>
 <head>
 <link rel="stylesheet" href="results.css">
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!--<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 <!
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -13,10 +16,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- jQuery CDN -->
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
+<!--
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> 
+-->
 </head>
 
 <body class="bg">
@@ -95,9 +97,9 @@
 		$data = json_decode($json, true);
 		$picture = $data[$appid]["data"]["header_image"];
 		if ($picture){
-			echo "<div class=\"griddy\"> <a href=\"http://store.steampowered.com/app/$appid/\"><img class=\"gametile\" src=\"$picture\" alt=\"{$row['name']}\" title=\"{$row['name']}\"></img></a></div>";
+			echo "<div class=\"griddy\"> <a href=\"http://store.steampowered.com/app/$appid/\" onclick=\"return showModal();\"><img class=\"gametile\" src=\"$picture\" alt=\"{$row['name']}\" title=\"{$row['name']}\"></img></a></div>";
 		}else{
-			 echo "<div class=\"griddy\"> <a href=\"http://store.steampowered.com/app/$appid\"><img class=\"gametile not-avail\" src=\"./notavailableresz.png\" alt=\"{$row['name']}\" title=\"{$row['name']}\" ></img></a></div>";
+			 echo "<div class=\"griddy\"> <a href=\"http://store.steampowered.com/app/$appid\" onclick=\"return showModal();\"><img class=\"gametile not-avail\" src=\"./notavailableresz.png\" alt=\"{$row['name']}\" title=\"{$row['name']}\" ></img></a></div>";
 		}
         }
 	echo "</div>"; //container
@@ -130,11 +132,13 @@
         echo $pagination;
 	echo "<br>";
 	echo "<div class=\"jumper\">";
-	echo "Jump to page: <input  style=\"color:black;text-align:center;\"type=\"text\" size=1> &nbsp; <button type=\"button\" class=\"btn btn-info go\">Go</button>";
+	echo "Jump to page: <input class=\"classless\" style=\"color:black;text-align:center;\"type=\"text\" size=1> &nbsp; <button type=\"button\" class=\"btn btn-info go\">Go</button>";
 	echo "</div>"; //jumper
 	echo "</div>";
 
 ?>
+
+<script src="modal.js"></script>
 </div>
 </body>
 </html>
