@@ -96,10 +96,44 @@
 
 		$data = json_decode($json, true);
 		$picture = $data[$appid]["data"]["header_image"];
+		$desc = htmlspecialchars_decode($data[$appid]["data"]["short_description"]);
+		if ($desc == ''){
+			$desc = 'No description available.';
+		}
 		if ($picture){
-			echo "<div class=\"griddy\"> <a href=\"http://store.steampowered.com/app/$appid/\" onclick=\"return showModal();\"><img class=\"gametile\" src=\"$picture\" alt=\"{$row['name']}\" title=\"{$row['name']}\"></img></a></div>";
+			echo "<div data-id=\"{$row['appid']}\" id=\"myBtn\" class=\"griddy\"> <a ><img class=\"gametile\" src=\"$picture\" alt=\"{$row['name']}\" title=\"{$row['name']}\"></img></a></div>
+<div id=\"{$row['appid']}\" class=\"modal\">
+
+  <!-- Modal content -->
+  <div class=\"modal-content\">
+    <span class=\"close\">&times;</span>
+    <img class=\"modalimg\" src=\"$picture\" alt=\"{$row['name']}\" title=\"{$row['name']}\"></img><h3>{$row['name']}</h3>
+	<br>
+	$desc
+	<br>
+	<br>
+     <a target=\"_blank\" href=\"http://store.steampowered.com/app/$appid/\"><button type=\"button\" class=\"btn btn-success\">See on steam</button></a></p>
+  </div>
+
+</div>
+";
 		}else{
-			 echo "<div class=\"griddy\"> <a href=\"http://store.steampowered.com/app/$appid\" onclick=\"return showModal();\"><img class=\"gametile not-avail\" src=\"./notavailableresz.png\" alt=\"{$row['name']}\" title=\"{$row['name']}\" ></img></a></div>";
+			 echo "<div data-id=\"{$row['appid']}\" id=\"myBtn\" class=\"griddy\"> <a ><img class=\"gametile not-avail\" src=\"./notavailableresz.png\" alt=\"{$row['name']}\" title=\"{$row['name']}\" ></img></a></div>
+<div id=\"{$row['appid']}\" class=\"modal\">
+
+  <!-- Modal content -->
+  <div class=\"modal-content\">
+    <span class=\"close\">&times;</span>
+    <img class=\"modalimg\" src=\"./notavailableresz.png\" alt=\"{$row['name']}\" title=\"{$row['name']}\"></img><h3>{$row['name']}</h3>
+        <br>
+        $desc
+        <br>
+        <br>
+     <a target=\"_blank\" href=\"http://store.steampowered.com/app/$appid/\"><button type=\"button\" class=\"btn btn-success\">See on steam</button></a></p>
+  </div>
+
+</div>
+";
 		}
         }
 	echo "</div>"; //container

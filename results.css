@@ -31,11 +31,17 @@
 	border-radius: 13px;
 	box-shadow: 0 0 13px 4px #808080;
 }
+.modalimg{
+	display: block;
+	width: 40%;
+	border-radius: 13px;
+}
 img.gametile:hover{
 	border-radius: 13px;
 	box-shadow: 0 0 20px 13px #808080;
 	transform: scale(1.2);
 	transition: transform .2s;
+	cursor: pointer;
 }
 .go {
 	padding: 3px 8px !important;
@@ -50,6 +56,7 @@ img.gametile:hover{
 .griddy{
 	padding: 6%;
 }
+
 .not-avail{
 	/*
 	height: 100%;
@@ -75,4 +82,44 @@ img.gametile:hover{
 	margin-top: 0%;
 	#margin: 2%;
 	padding: 3%; /*uhh?*/
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4) !important; /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #333333 !important;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 35%;
+    color: white;
+}
+
+/* The Close Button */
+.close {
+    color: white !important;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
